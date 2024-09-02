@@ -19,8 +19,11 @@ void drawIcon(QPainter &p, const QPoint &center, const QPixmap &img, const QBrus
 ExperimentalButton::ExperimentalButton(QWidget *parent) : experimental_mode(false), engageable(false), QPushButton(parent) {
   setFixedSize(btn_size, btn_size);
 
-  engage_img = loadPixmap("../assets/img_chffr_wheel.png", {img_size, img_size});
-  experimental_img = loadPixmap("../assets/img_experimental.svg", {img_size, img_size});
+  //*^D_t_a^*//
+  //engage_img = loadPixmap("../assets/img_chffr_wheel.png", {img_size, img_size});
+  engage_img = loadPixmap("../assets/Sabrecat_2.png", {img_size, img_size});
+  //experimental_img = loadPixmap("../assets/img_experimental.svg", {img_size, img_size});
+  experimental_img = loadPixmap("../assets/Girl-Look_Orange.svg", {img_size, img_size});
   QObject::connect(this, &QPushButton::clicked, this, &ExperimentalButton::changeMode);
 }
 

@@ -9,8 +9,11 @@
 #include "selfdrive/ui/ui.h"
 
 ExperimentalModeButton::ExperimentalModeButton(QWidget *parent) : QPushButton(parent) {
-  chill_pixmap = QPixmap("../assets/img_couch.svg").scaledToWidth(img_width, Qt::SmoothTransformation);
-  experimental_pixmap = QPixmap("../assets/img_experimental_grey.svg").scaledToWidth(img_width, Qt::SmoothTransformation);
+  //*^D_t_a^*//
+  //chill_pixmap = QPixmap("../assets/img_couch.svg").scaledToWidth(img_width, Qt::SmoothTransformation);
+  chill_pixmap = QPixmap("../assets/Girl-Running_Orange.svg").scaledToWidth(img_width, Qt::SmoothTransformation);
+  //experimental_pixmap = QPixmap("../assets/img_experimental_grey.svg").scaledToWidth(img_width, Qt::SmoothTransformation);
+  experimental_pixmap = QPixmap("../assets/Girl-Look_Orange.svg").scaledToWidth(img_width, Qt::SmoothTransformation);
 
   // go to toggles and expand experimental mode description
   connect(this, &QPushButton::clicked, [=]() { emit openSettings(2, "ExperimentalMode"); });
@@ -72,5 +75,7 @@ void ExperimentalModeButton::paintEvent(QPaintEvent *event) {
 void ExperimentalModeButton::showEvent(QShowEvent *event) {
   experimental_mode = params.getBool("ExperimentalMode");
   mode_icon->setPixmap(experimental_mode ? experimental_pixmap : chill_pixmap);
-  mode_label->setText(experimental_mode ? tr("EXPERIMENTAL MODE ON") : tr("CHILL MODE ON"));
+  //*^D_t_a^*//
+  //mode_label->setText(experimental_mode ? tr("EXPERIMENTAL MODE ON") : tr("CHILL MODE ON"));
+  mode_label->setText(experimental_mode ? tr("Experimental") : tr("Light"));
 }

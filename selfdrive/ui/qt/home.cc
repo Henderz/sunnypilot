@@ -152,7 +152,8 @@ OffroadHome::OffroadHome(QWidget* parent) : QFrame(parent) {
 #else
     left_widget->addWidget(new QWidget);
 #endif
-    left_widget->addWidget(new PrimeAdWidget);
+    //*^D_t_a^*//
+    //left_widget->addWidget(new PrimeAdWidget);
     left_widget->setStyleSheet("border-radius: 10px;");
 
     left_widget->setCurrentIndex(uiState()->hasPrime() ? 0 : 1);
@@ -224,7 +225,9 @@ void OffroadHome::hideEvent(QHideEvent *event) {
 }
 
 void OffroadHome::refresh() {
-  version->setText(getBrand() + " " +  QString::fromStdString(params.get("UpdaterCurrentDescription")));
+  //*^D_t_a^*//
+  //version->setText(getBrand() + " " +  QString::fromStdString(params.get("UpdaterCurrentDescription")));
+  version->setText("SABRECAT " +  QString::fromStdString(params.get("UpdaterCurrentDescription")));
 
   bool updateAvailable = update_widget->refresh();
   int alerts = alerts_widget->refresh();

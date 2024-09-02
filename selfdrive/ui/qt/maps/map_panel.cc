@@ -27,11 +27,14 @@ MapPanel::MapPanel(const QMapLibre::Settings &mapboxSettings, QWidget *parent) :
   });
   content_stack->addWidget(map);
 
+  //*^D_t_a^*//
+  /*
   auto settings = new MapSettings(true, parent);
   QObject::connect(settings, &MapSettings::closeSettings, this, [=]() {
     content_stack->setCurrentIndex(0);
   });
   content_stack->addWidget(settings);
+  */
 }
 
 void MapPanel::toggleMapSettings() {
